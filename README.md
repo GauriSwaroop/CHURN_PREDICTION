@@ -1,2 +1,8 @@
-# CHURN_PREDICTION
-An XGBoost model that predicts churn of customers.
+This project contains a customer churn prediction model built using XGBoost. The model predicts the probability of a customer leaving (churning) based on several features, including numeric features such as tenure, monthly charges, and total charges, as well as categorical features like contract type, dependents, and device protection. The goal of this project is to provide a tool for businesses to identify customers at risk of churning so they can take proactive measures.
+
+The repository includes the trained model (churn_model.pkl), a scaler for numeric features (scaler.pkl), and a placeholder Streamlit app (app.py) that will later allow users to interactively input customer data and get churn predictions. Additionally, the feature order used in training can be saved in feature_order.pkl to ensure consistent input when making predictions.
+
+Currently, the model has been trained on a dataset with both numeric and categorical variables. Numeric features include tenure, MonthlyCharges, and TotalCharges, while categorical features include Contract (Month-to-month, One year, Two year), Dependents (Yes/No), and DeviceProtection (Yes/No/No internet service), among others. The model uses preprocessing steps such as scaling for numeric features and one-hot encoding for categorical features to match the training setup.
+
+This repository is ready for further development into a full interactive application using Streamlit. Users can clone the repository, install required packages such as numpy, pandas, scikit-learn, xgboost, streamlit, and joblib, and load the model in Python for testing or later integration into the app. Once the Streamlit app is completed, it will allow users to enter customer data and receive churn probability predictions in real-time.
+
